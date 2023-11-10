@@ -1,13 +1,13 @@
-
+import React from 'react';
 import './App.css';
+import Navbar from './components/navbar';
 
 function App() {
   return (
-   <div className='text-2xl font-extrabold font-serif text-6xl"'>
-      minor
-
-   </div>
+    <div>
+      <Navbar />
       
+    </div>
   );
 }
 

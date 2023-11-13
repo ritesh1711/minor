@@ -20,7 +20,7 @@ export default function footer() {
         </div> 
       </div>
       </footer>
-      <footer className='bg-red-900 h-50 text-white py-2  fixed bottom-0 w-full'>
+      <footer className='bg-red-900 h-50 text-white py-2   bottom-0 w-full'>
       <div className="container mx-auto text-center">
         <div className='underline'> Disclaimer</div>
         <p> Product prices, offers and availability are subject to change from time to time.

@@ -24,7 +24,8 @@ export default function footer() {
       <div className="container mx-auto text-center">
         <div className='underline'> Disclaimer</div>
         <p> Product prices, offers and availability are subject to change from time to time.
-        All prices are inclusive of taxes. </p>
+        All prices are inclusive of taxes.
+        Product colours & images are only for illustration and they may not exactly match with the actual product </p>
         <p>&copy; 2023 Your Company Name. All rights reserved.</p>
       </div>
       </footer>

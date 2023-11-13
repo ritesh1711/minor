@@ -3,7 +3,7 @@ import React from 'react'
 export default function footer() {
   return (
     <div>
-      <footer className='bg-red-500 h-50 text-white py-4 fixed bottom-0 w-full'>
+      <footer className='bg-red-500 h-50 text-white py-4  bottom-0 w-full'>
       <div className="container mx-auto ml-3.5">
         <span className='underline font-bold text-2xl text-left'> PRODUCT CATEGORIES </span>
         <div className='text-2xl hover:text-cyan-300'> Smartphones  </div>

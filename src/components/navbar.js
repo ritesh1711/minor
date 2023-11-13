@@ -3,7 +3,7 @@ import React from 'react'
 export default function navbar() {
   return (
     <div>
-      <header className='bg-cyan-700 h-40 '>
+      <header className='bg-gradient-to-r from-indigo-500 via-purple-800 to-pink-500 h-36'>
         <div className='flex flex-col'>
         <div className='flex flex-row justify-between'>
           <div>logo</div>
@@ -18,7 +18,7 @@ export default function navbar() {
 
         </div>
         <div >
-        <div className="flex-1 text-right mr-12 pt-5">
+        <div className="flex-1 text-center pt-3">
           <input
             type="text"
             className="w-1/4 px-2 py-1 rounded border border-gray-300 focus:outline-none focus:ring focus:border-blue-400 "

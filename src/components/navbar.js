@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './DiGi eXpress (2).png'; // Adjust the image filename based on your actual filename
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome ,faShoppingCart ,faUser} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 
@@ -55,3 +56,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+

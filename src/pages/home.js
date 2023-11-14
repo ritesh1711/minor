@@ -14,11 +14,12 @@ const backgroundImageStyle2 = {
   };
   return (
       <div>
-        <div className='grid-rows-4'>
-            <div>hello</div>
-            <div>hello</div>
-            <div>hello</div>
-            <div>hello</div>
+        <div className='flex flex-row place-content-between bg-black h-12'>
+            <div className='text-black pl-20 bg-yellow-500 px-24 py-2 rounded  font-bold'>Mobile Phones</div>
+            <div className='text-black bg-yellow-500 px-24 py-2 rounded font-bold'>Televisions</div>
+            <div className='text-black bg-yellow-500 px-24 py-2 rounded font-bold'>AirConditioners</div>
+            <div className='text-black bg-yellow-500 px-24 py-2 rounded font-bold'>Washing machine  </div>
+            <div className='text-black pr-20 bg-yellow-500 px-24 py-2 rounded font-bold'>Refregirators</div>
         </div>
 
         <div>

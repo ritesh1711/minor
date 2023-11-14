@@ -13,9 +13,21 @@ export default function home() {
 const backgroundImageStyle2 = {
   };
   return (
-    <div>
-      <div className="bg-cover bg-no-repeat bg-center h-screen" style={backgroundImageStyle1}></div>
-        
-    </div>
+      <div>
+        <div className='grid-rows-4'>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+            <div>hello</div>
+        </div>
+
+        <div>
+          <div className="bg-cover bg-no-repeat bg-center h-screen" style={backgroundImageStyle1}></div>
+        </div>
+
+
+      </div>
+    
+    
   )
 }

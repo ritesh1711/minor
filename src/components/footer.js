@@ -22,7 +22,7 @@ export default function footer() {
             
             <footer className='bg-red-900 h-50 text-white py-2 bottom-0 w-full'>
                 <div className="container mx-auto text-center">
-                    <div className='underline'> Disclaimer</div>
+                    <div className='underline'> Disclaimer </div>
                     <p> Product prices, offers and availability are subject to change from time to time.
                         All prices are inclusive of taxes.
                         Product colours & images are only for illustration and they may not exactly match with the actual product </p>

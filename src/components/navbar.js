@@ -28,15 +28,15 @@ const Navbar = () => {
           </div>
 
           <div className='flex flex-row space-x-4 pt-4 sm:pt-5 lg:pl-4'>
-            <div className='text-3xl hover:text-cyan-300'>
+            <Link to="/" className='text-3xl hover:text-cyan-300'>
               <FontAwesomeIcon icon={faHome} className="icon" />
-            </div>
-            <div className='text-3xl hover:text-cyan-300'>
+            </Link>
+            <Link to="/cart" className='text-3xl hover:text-cyan-300'>
               <FontAwesomeIcon icon={faShoppingCart} className="icon" />
-            </div>
-            <div className='text-3xl hover:text-cyan-300'>
+            </Link>
+            <Link to="/login" className='text-3xl hover:text-cyan-300'>
               <FontAwesomeIcon icon={faUser} className="icon" />
-            </div>
+            </Link>
           </div>
         </div>
       </header>

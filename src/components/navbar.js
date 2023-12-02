@@ -3,6 +3,8 @@ import logo from './DiGi eXpress (2).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import ProductListing from '../products';
+
 
 const Navbar = () => {
   return (
@@ -36,6 +38,13 @@ const Navbar = () => {
             </Link>
             <Link to="/login" className='text-3xl hover:text-cyan-300'>
               <FontAwesomeIcon icon={faUser} className="icon" />
+            </Link>
+
+            {/* Add the button for navigating to the product listing page */}
+            <Link to="/products" className='text-3xl hover:text-cyan-300'>
+              <button className="focus:outline-none">
+                Products
+              </button>
             </Link>
           </div>
         </div>

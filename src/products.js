@@ -31,7 +31,10 @@ export default function Products() {
       <div>
         {products &&
           products.map((product) => (
-            <p key={product._id}>{product.name}</p>
+            <div key={product._id}>
+              <p>{product.name}</p>
+              <p>{product.price}</p>
+            </div>
           ))}
       </div>
     </div>

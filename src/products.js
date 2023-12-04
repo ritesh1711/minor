@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import laptop from './product/laptop';
+
+
+
 export default function Products() {
   return (
     <div className='flex flex-row justify-between'>
@@ -13,9 +18,15 @@ export default function Products() {
           <div className='text-4xl pb-56 font-bold'>
             LAPTOPS
           </div>
-          <div className='pl-4'>
+          <div>
+            <Link to="/laptop">
+            <div className='pl-4'>
             <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4'>VIEW MORE</button>
           </div>
+          </Link>
+          
+          </div>
+          
         </div>
       </div>
 

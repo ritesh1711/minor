@@ -16,7 +16,7 @@ function Signup() {
     try {
       // Validate form fields (you can add more validation logic if needed)
   
-      const response = await axios.post("https://digiexpresstrail.onrender.com/register", {
+      const response = await axios.post("http://localhost:3001/register", {
         name,
         email,
         password,
@@ -26,8 +26,11 @@ function Signup() {
       navigate('/login');
     } catch (err) {
       if (err.response && err.response.status === 400) {
+        // Handle validation errors
         const serverErrors = err.response.data.validationErrors;
         const customErrorMessages = [];
+  
+        // Customize error messages based on validation errors
         if (serverErrors && serverErrors.name) {
           customErrorMessages.push("Invalid name format");
         }

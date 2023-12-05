@@ -2,6 +2,10 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import laptop from './product/laptop';
+import Tv from './product/tv';
+import Phones from './product/phones';
+
+
 
 
 
@@ -40,9 +44,11 @@ export default function Products() {
           <div className='text-4xl pb-48 pr-10 font-bold pl-12'>
             MOBILE PHONES
           </div>
-          <div className='pl-10 pb-8 pt-4'>
-            <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4 '>VIEW MORE</button>
+          <Link to="/phones">
+            <div className='pl-4'>
+            <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4'>VIEW MORE</button>
           </div>
+          </Link>
         </div>
       </div>
 
@@ -56,9 +62,11 @@ export default function Products() {
           <div className='text-4xl pb-56 font-bold pl-6'>
             TELEVISIONS
           </div>
-          <div className='pl-4'>
+          <Link to="/Tv">
+            <div className='pl-4'>
             <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4'>VIEW MORE</button>
           </div>
+          </Link>
         </div>
       </div>
     </div>

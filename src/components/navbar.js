@@ -3,7 +3,8 @@ import logo from './DiGi eXpress (2).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import ProductListing from '../products';
+
+
 
 
 const Navbar = () => {

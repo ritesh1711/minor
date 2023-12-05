@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from 'react-modal';
 
-Modal.setAppElement('#root'); // Set the root element for accessibility
+// Set the root element for accessibility
+const modalAppElement = Modal.setAppElement('#root');
 
-export default function Laptop() {
+export default function Phones() {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -17,6 +18,7 @@ export default function Laptop() {
 
         if (!response.ok) {
           console.error('Failed to fetch products. Status:', response.status, response.statusText);
+          setLoading(false);
           return;
         }
 
@@ -48,13 +50,13 @@ export default function Laptop() {
 
   return (
     <div className="container mx-auto my-8">
-      <h2 className="text-center font-extrabold text-4xl mb-8">LAPTOPS</h2>
+      <h2 className="text-center font-extrabold text-4xl mb-8">PHONES</h2>
       {loading ? (
         <p className="text-center">Loading...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            product.category === 'laptop' ? (
+          {products && products.map((product, index) => (
+            product.category === 'Phones' ? (
               <motion.div
                 key={product._id}
                 className="bg-white p-6 rounded-lg shadow-md"
@@ -74,7 +76,7 @@ export default function Laptop() {
                 <p className="text-gray-600 mb-2">{product.model}</p>
                 <p className="text-2xl font-bold text-red-600 mb-4">{product.price}</p>
                 <button
-                  className="bg-blue-500 text-white px-4 py-2 rounded-mdgit "
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
                   onClick={() => handleAddToCart(product._id)}
                 >
                   Add to Cart

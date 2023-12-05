@@ -10,11 +10,11 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
-      <header className='bg-gradient-to-r from-indigo-500 via-purple-800 to-pink-500 sm:h-36 md:h-38 lg:h-38'>
+      <header className='bg-black sm:h-36 md:h-38 lg:h-38'>
         <div className='container mx-auto flex flex-col sm:flex-row justify-between items-center'>
           <div className='flex items-center justify-center sm:justify-start'>
-            <img src={logo} alt="Logo" className="h-24 w-24" />
-            <div className='text-4xl font-extrabold pl-5 pt-5'>
+            <img src={logo} alt="Logo" className="h-36 w-40" />
+            <div className='text-4xl text-white font-extrabold pl-5 pt-5'>
               <i>DiGiexpress</i>
             </div>
           </div>
@@ -31,18 +31,18 @@ const Navbar = () => {
           </div>
 
           <div className='flex flex-row space-x-4 pt-4 sm:pt-5 lg:pl-4'>
-            <Link to="/" className='text-3xl hover:text-cyan-300'>
+            <Link to="/" className='text-3xl text-white hover:text-cyan-300'>
               <FontAwesomeIcon icon={faHome} className="icon" />
             </Link>
-            <Link to="/cart" className='text-3xl hover:text-cyan-300'>
+            <Link to="/cart" className='text-3xl text-white hover:text-cyan-300'>
               <FontAwesomeIcon icon={faShoppingCart} className="icon" />
             </Link>
-            <Link to="/login" className='text-3xl hover:text-cyan-300'>
+            <Link to="/login" className='text-3xl text-white hover:text-cyan-300'>
               <FontAwesomeIcon icon={faUser} className="icon" />
             </Link>
 
             {/* Add the button for navigating to the product listing page */}
-            <Link to="/products" className='text-3xl hover:text-cyan-300'>
+            <Link to="/products" className='text-3xl text-white hover:text-cyan-300'>
               <button className="focus:outline-none">
                 Products
               </button>

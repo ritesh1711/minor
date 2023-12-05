@@ -12,7 +12,7 @@ function Login() {
       e.preventDefault();
       console.log({ email, password });
       axios
-        .post("http://localhost:3001/login", { email, password })
+        .post("hhttps://digiexpresstrail.onrender.com/login", { email, password })
         .then((result) => {console.log(result)
           if (result.data ==="success") {
             navigate('/home') 

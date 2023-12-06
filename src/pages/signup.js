@@ -4,10 +4,10 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 function Signup() {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const navigate=useNavigate();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
   const [errorMessages, setErrorMessages] = useState([]);
 
   const handleSubmit = async (e) => {
@@ -50,14 +50,15 @@ function Signup() {
       }
     }
   };
+
   return (
-    <div className="d-flex justify-content-corner align-items-center bg-secondary vh-100">
-      <div className="bg-white p-3 rounded w-25">
-        <h2>Registration</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gray-200">
+      <div className="bg-white p-6 rounded shadow-md w-96">
+        <h2 className="text-2xl font-bold mb-6">Registration</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="name">
-              <strong>Name</strong>
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-600">
+              Name
             </label>
             <input
               type="text"
@@ -65,13 +66,13 @@ function Signup() {
               autoComplete="off"
               id="name"
               name="name"
-              className="form-control rounded-0"
+              className="mt-1 p-2 w-full rounded border-gray-300"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="email">
-              <strong>Email</strong>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-600">
+              Email
             </label>
             <input
               type="email"
@@ -79,13 +80,13 @@ function Signup() {
               autoComplete="off"
               id="email"
               name="email"
-              className="form-control rounded-0"
+              className="mt-1 p-2 w-full rounded border-gray-300"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="password">
-              <strong>Password</strong>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-600">
+              Password
             </label>
             <input
               type="password"
@@ -93,11 +94,14 @@ function Signup() {
               autoComplete="off"
               id="password"
               name="password"
-              className="form-control rounded-0"
+              className="mt-1 p-2 w-full rounded border-gray-300"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-success w-100 rounded-0">
+          <button
+            type="submit"
+            className="bg-green-500 text-white p-2 w-full rounded hover:bg-green-600"
+          >
             Register
           </button>
         </form>
@@ -109,10 +113,10 @@ function Signup() {
             ))}
           </div>
         )}
-        <p>Already have an account?</p>
+        <p className="mt-4">Already have an account?</p>
         <Link
           to="/login"
-          className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
+          className="mt-2 block text-center text-gray-600 underline hover:text-gray-800"
         >
           Login
         </Link>

@@ -4,7 +4,8 @@ import './App.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
-import Login from './pages/login'; // assuming this is your login component
+import Signup from './pages/signup';
+import Login from './pages/login'; 
 import Products from './products';
 import Laptop from './product/laptop';
 import Tv from './product/tv';
@@ -17,7 +18,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path='/register' element={<Signup/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
           <Route path="/products" element={<Products />} />
           <Route path="/laptop" element={<Laptop />} />
           <Route path="/tv" element={<Tv />} />

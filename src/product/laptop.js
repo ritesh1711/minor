@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from 'react-modal';
-
+import { UseCart ,UseDispatchCart } from '../components/contextreducer';
 Modal.setAppElement('#root'); // Set the root element for accessibility
 
+
 export default function Laptop() {
+  let dispatch = UseDispatchCart();
+  let data = UseCart();
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [qty, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,8 +36,18 @@ export default function Laptop() {
     fetchData();
   }, []);
 
-  const handleAddToCart = (productId) => {
-    console.log(`Product added to cart: ${productId}`);
+  const handleAddToCart = async (product) => {
+    await dispatch({
+      type: "ADD",
+      payload: {
+        id: product._id,
+        name: product.name,
+        brand: product.brand,
+        model: product.model,
+        price: product.price,
+      },
+    });
+    console.log(data);
   };
 
   const openModal = (product) => {
@@ -72,7 +86,7 @@ export default function Laptop() {
                 <p className="text-xl font-semibold mb-2">{product.name}</p>
                 <p className="text-gray-600 mb-2">{product.brand}</p>
                 <p className="text-gray-600 mb-2">{product.model}</p>
-                <p className="text-2xl font-bold text-red-600 mb-4">{product.price}</p>
+                <p className="text-2xl font-bold text-red-600 mb-4">${product.price}/-</p>
                 <button
                   className="bg-blue-500 text-white px-4 py-2 rounded-mdgit "
                   onClick={() => handleAddToCart(product._id)}

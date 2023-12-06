@@ -10,10 +10,12 @@ import Products from './products';
 import Laptop from './product/laptop';
 import Tv from './product/tv';
 import Phones from './product/phones'; // Corrected the component name
+import { CartProvider } from './components/contextreducer';
 
 function App() {
   return (
-    <Router>
+    <CartProvider>
+      <Router>
       <div>
         <Navbar />
         <Routes>
@@ -28,6 +30,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </CartProvider>
   );
 }
 

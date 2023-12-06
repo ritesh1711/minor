@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -16,7 +17,7 @@ function Signup() {
     try {
       // Validate form fields (you can add more validation logic if needed)
   
-      const response = await axios.post("http://localhost:3001/register", {
+      const response = await axios.post("https://digiexpressserver.onrender.com/register", {
         name,
         email,
         password,
@@ -45,7 +46,6 @@ function Signup() {
   
         setErrorMessages(customErrorMessages);
       } else {
-        // Handle other types of errors
         console.error(err);
       }
     }

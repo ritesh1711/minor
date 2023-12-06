@@ -52,6 +52,7 @@ function Signup() {
   };
 
   return (
+    
     <div className="flex justify-center items-center min-h-screen bg-gray-200">
       <div className="bg-white p-6 rounded shadow-md w-96">
         <h2 className="text-2xl font-bold mb-6">Registration</h2>

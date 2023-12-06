@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Modal from 'react-modal';
 
 // Set the root element for accessibility
+// eslint-disable-next-line no-unused-vars
 const modalAppElement = Modal.setAppElement('#root');
 
 export default function Phones() {

@@ -19,6 +19,12 @@ const Navbar = () => {
             </div>
           </div>
 
+          <Link to="/products" className='text-3xl text-red-700 hover:text-cyan-300'>
+              <button className="focus:outline-none">
+                Menu
+              </button>
+            </Link>
+
           <div className="flex justify-center sm:justify-end sm:pt-8 pr-10 lg:pt-5 lg:pl-64">
             <input
               type="text"
@@ -31,22 +37,18 @@ const Navbar = () => {
           </div>
 
           <div className='flex flex-row space-x-4 pt-4 sm:pt-5 lg:pl-4'>
-            <Link to="/" className='text-3xl text-white hover:text-cyan-300'>
+            <Link to="/" className='text-3xl text-red-700 hover:text-cyan-300'>
               <FontAwesomeIcon icon={faHome} className="icon" />
             </Link>
-            <Link to="/cart" className='text-3xl text-white hover:text-cyan-300'>
+            <Link to="/cart" className='text-3xl text-red-700 hover:text-cyan-300'>
               <FontAwesomeIcon icon={faShoppingCart} className="icon" />
             </Link>
-            <Link to="/login" className='text-3xl text-white hover:text-cyan-300'>
+            <Link to="/login" className='text-3xl text-red-700 hover:text-cyan-300'>
               <FontAwesomeIcon icon={faUser} className="icon" />
             </Link>
 
             {/* Add the button for navigating to the product listing page */}
-            <Link to="/products" className='text-3xl text-white hover:text-cyan-300'>
-              <button className="focus:outline-none">
-                Products
-              </button>
-            </Link>
+            
           </div>
         </div>
       </header>

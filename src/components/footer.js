@@ -4,7 +4,7 @@ import React from 'react';
 export default function Footer() {
     return (
         <div>
-            <div className='flex flex-col md:flex-row bg-black opacity-90 text-white py-4 md:py-2 w-full '>
+            <div className='flex flex-col md:flex-row bg-black opacity-90 text-white py-4 md:py-2 w-full sticky bottom-0 '>
                 <div className='mb-4 md:mb-0 md:mr-8'>
                     <span className='underline font-bold text-2xl text-red-600 text-left'> PRODUCT CATEGORIES </span>
                     <div className='text-2xl hover:text-cyan-300'> Smartphones  </div>

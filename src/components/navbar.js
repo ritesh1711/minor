@@ -13,7 +13,10 @@ const Navbar = () => {
       <header className='bg-black sm:h-36 md:h-38 lg:h-38'>
         <div className='container mx-auto flex flex-col sm:flex-row justify-between items-center'>
           <div className='flex items-center justify-center sm:justify-start'>
-            <img src={logo} alt="Logo" className="h-36 w-40" />
+          <Link to="/" >
+          <img src={logo} alt="Logo" className="h-36 w-40" />
+          </Link>
+            
             <div className='text-4xl text-white font-extrabold pl-5 pt-5'>
               <i>DiGiexpress</i>
             </div>

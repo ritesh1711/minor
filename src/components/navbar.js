@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to="/cart" className='text-3xl text-red-700 hover:text-cyan-300'>
               <FontAwesomeIcon icon={faShoppingCart} className="icon" />
             </Link>
-            <Link to="/login" className='text-3xl text-red-700 hover:text-cyan-300'>
+            <Link to="/register" className='text-3xl text-red-700 hover:text-cyan-300'>
               <FontAwesomeIcon icon={faUser} className="icon" />
             </Link>
 

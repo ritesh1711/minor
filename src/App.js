@@ -20,6 +20,11 @@ import Monitors from './product/Monitors';
 import Microwave from './product/Microwave';
 import Iron from './product/Iron';
 import Gyser from './product/Gyser';
+import Fans from './product/Fans';
+import Desktops from './product/Desktops';
+import Wearables from './product/Wearables';
+
+
 
 
 function App() {
@@ -45,7 +50,9 @@ function App() {
             <Route path="/Microwave" element={<Microwave />} />
             <Route path="/Iron" element={<Iron />} />
             <Route path="/Gyser" element={<Gyser />} />
-            <Route path="/Microwave" element={<Microwave />} />
+            <Route path="/Fans" element={<Fans />} />
+            <Route path="/Desktops" element={<Desktops />} />
+            <Route path="/Wearables" element={<Wearables />} />
             
           </Routes>
           <Footer />

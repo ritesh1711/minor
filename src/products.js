@@ -23,8 +23,9 @@ const ProductCategory = ({ imageUrl, altText, category, linkTo }) => (
 
 export default function Products() {
   return (
+    
     <div>
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between  '>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           altText='Laptop'
@@ -51,7 +52,7 @@ export default function Products() {
         hello
       </div>
 
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between '>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1520783155484-157cf5431a06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           altText='Washing Machines'
@@ -79,7 +80,7 @@ export default function Products() {
       </div>
 
 
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between '>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           altText='Speaker and media players'
@@ -106,7 +107,7 @@ export default function Products() {
         hello
       </div>
 
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row justify-between  '>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1526868452228-6590028c2fac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           altText='Microwave and oven'
@@ -126,6 +127,33 @@ export default function Products() {
           altText='Gyser'
           category='Gyser'
           linkTo='/Gyser'
+        />
+      </div>
+
+      <div className='bg-black h-10'>
+        hello
+      </div>
+
+      <div className='flex flex-row justify-between  '>
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1590341758888-a5ac1fe37a24?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Fans'
+          category='Fans'
+          linkTo='/Fans' 
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1619597455322-4fbbd820250a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%Wearables'
+          altText='Desktops'
+          category='Desktops'
+          linkTo='/Desktops'
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1511370235399-1802cae1d32f?q=80&w=2055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Wearables'
+          category='Wearables'
+          linkTo='/Wearables'
         />
       </div>
 

@@ -9,27 +9,35 @@ import Login from './pages/login';
 import Products from './products';
 import Laptop from './product/laptop';
 import Tv from './product/tv';
-import Phones from './product/phones'; // Corrected the component name
+import Phones from './product/phones';
 import { CartProvider } from './components/contextreducer';
+import Washing from './product/washing';
+import Refrigerator from './product/Refrigerator';
+import Tablets from './product/Tablets';
+
+
 
 function App() {
   return (
     <CartProvider>
       <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/register' element={<Signup/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path="/products" element={<Products />} />
-          <Route path="/laptop" element={<Laptop />} />
-          <Route path="/tv" element={<Tv />} />
-          <Route path="/phones" element={<Phones />} /> {/* Corrected the component name */}
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/register' element={<Signup />} />
+            <Route path='/login' element={<Login />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/laptop" element={<Laptop />} />
+            <Route path="/tv" element={<Tv />} />
+            <Route path="/phones" element={<Phones />} />
+            <Route path="/washing" element={<Washing />} />
+            <Route path="/Refrigerator" element={<Refrigerator />} />
+            <Route path="/Tablets" element={<Tablets />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </CartProvider>
   );
 }

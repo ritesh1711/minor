@@ -14,7 +14,12 @@ import { CartProvider } from './components/contextreducer';
 import Washing from './product/washing';
 import Refrigerator from './product/Refrigerator';
 import Tablets from './product/Tablets';
-
+import Speaker from './product/Speaker';
+import Projectors from './product/Projectors';
+import Monitors from './product/Monitors';
+import Microwave from './product/Microwave';
+import Iron from './product/Iron';
+import Gyser from './product/Gyser';
 
 
 function App() {
@@ -34,6 +39,14 @@ function App() {
             <Route path="/washing" element={<Washing />} />
             <Route path="/Refrigerator" element={<Refrigerator />} />
             <Route path="/Tablets" element={<Tablets />} />
+            <Route path="/Speaker" element={<Speaker />} />
+            <Route path="/Projectors" element={<Projectors />} />
+            <Route path="/Monitors" element={<Monitors />} />
+            <Route path="/Microwave" element={<Microwave />} />
+            <Route path="/Iron" element={<Iron />} />
+            <Route path="/Gyser" element={<Gyser />} />
+            <Route path="/Microwave" element={<Microwave />} />
+            
           </Routes>
           <Footer />
         </div>

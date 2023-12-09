@@ -13,8 +13,8 @@ const ProductCategory = ({ imageUrl, altText, category, linkTo }) => (
         {category}
       </div>
       <Link to={linkTo}>
-        <div className='pl-4'>
-          <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4 pb-10'>VIEW MORE</button>
+        <div className='pl-4 pb-12'>
+          <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4 '>VIEW MORE</button>
         </div>
       </Link>
     </div>
@@ -47,6 +47,10 @@ export default function Products() {
         />
       </div>
 
+      <div className='bg-black h-10'>
+        hello
+      </div>
+
       <div className='flex flex-row justify-between'>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1520783155484-157cf5431a06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -69,6 +73,64 @@ export default function Products() {
           linkTo='/Tablets'
         />
       </div>
+
+      <div className='bg-black h-10'>
+        hello
+      </div>
+
+
+      <div className='flex flex-row justify-between'>
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Speaker and media players'
+          category='Speaker and media players'
+          linkTo='/Speaker' // Removed the space in the link
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1535016120720-40c646be5580?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Projectors'
+          category='Projectors'
+          linkTo='/Projectors'
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Monitors'
+          category='Monitors'
+          linkTo='/Monitors'
+        />
+      </div>
+
+      <div className='bg-black h-10'>
+        hello
+      </div>
+
+      <div className='flex flex-row justify-between'>
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1526868452228-6590028c2fac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Microwave and oven'
+          category='Microwave and oven'
+          linkTo='/Microwave' 
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1574269910231-bc508bcb68ae?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Iron'
+          category='Iron'
+          linkTo='/Iron'
+        />
+
+        <ProductCategory
+          imageUrl='https://images.unsplash.com/photo-1479669732031-affb2ce2d265?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          altText='Gyser'
+          category='Gyser'
+          linkTo='/Gyser'
+        />
+      </div>
+
+
+
     </div>
   );
 }

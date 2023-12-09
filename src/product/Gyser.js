@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from 'react-modal';
-import { UseCart ,UseDispatchCart } from '../components/contextreducer';
-Modal.setAppElement('#root'); // Set the root element for accessibility
 
+// Set the root element for accessibility
+// eslint-disable-next-line no-unused-vars
+const modalAppElement = Modal.setAppElement('#root');
 
-export default function Laptop() {
-  let dispatch = UseDispatchCart();
-  let data = UseCart();
+export default function Gyser() {
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [qty, setQuantity] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +19,7 @@ export default function Laptop() {
 
         if (!response.ok) {
           console.error('Failed to fetch products. Status:', response.status, response.statusText);
+          setLoading(false);
           return;
         }
 
@@ -36,18 +35,8 @@ export default function Laptop() {
     fetchData();
   }, []);
 
-  const handleAddToCart = async (product) => {
-    await dispatch({
-      type: "ADD",
-      payload: {
-        id: product._id,
-        name: product.name,
-        brand: product.brand,
-        model: product.model,
-        price: product.price,
-      },
-    });
-    console.log(data);
+  const handleAddToCart = (productId) => {
+    console.log(`Product added to cart: ${productId}`);
   };
 
   const openModal = (product) => {
@@ -59,17 +48,16 @@ export default function Laptop() {
     setSelectedProduct(null);
     setModalIsOpen(false);
   };
-  
 
   return (
     <div className="container mx-auto my-8">
-      <h2 className="text-center font-extrabold text-4xl mb-8">LAPTOPS</h2>
+      <h2 className="text-center font-extrabold text-4xl mb-8">Gyser</h2>
       {loading ? (
         <p className="text-center">Loading...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            product.category === 'laptop' ? (
+          {products && products.map((product, index) => (
+            product.category === 'Gyser' ? (
               <motion.div
                 key={product._id}
                 className="bg-white p-6 rounded-lg shadow-md"
@@ -87,9 +75,9 @@ export default function Laptop() {
                 <p className="text-xl font-semibold mb-2">{product.name}</p>
                 <p className="text-gray-600 mb-2">{product.brand}</p>
                 <p className="text-gray-600 mb-2">{product.model}</p>
-                <p className="text-2xl font-bold text-red-600 mb-4">${product.price}/-</p>
+                <p className="text-2xl font-bold text-red-600 mb-4">{product.price}</p>
                 <button
-                  className="bg-blue-500 text-white px-4 py-2 rounded-mdgit "
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
                   onClick={() => handleAddToCart(product._id)}
                 >
                   Add to Cart

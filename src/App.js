@@ -23,6 +23,12 @@ import Gyser from './product/Gyser';
 import Fans from './product/Fans';
 import Desktops from './product/Desktops';
 import Wearables from './product/Wearables';
+import Water from './product/Water';
+import Vacuum from './product/Vacuum';
+import Toaster from './product/Toaster';
+
+
+
 
 
 
@@ -53,6 +59,9 @@ function App() {
             <Route path="/Fans" element={<Fans />} />
             <Route path="/Desktops" element={<Desktops />} />
             <Route path="/Wearables" element={<Wearables />} />
+            <Route path="/Water" element={<Water />} />
+            <Route path="/Vacuum" element={<Vacuum />} />
+            <Route path="/Toaster" element={<Toaster />} />
             
           </Routes>
           <Footer />

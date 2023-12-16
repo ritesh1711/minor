@@ -14,7 +14,7 @@ const ProductCategory = ({ imageUrl, altText, category, linkTo }) => (
       </div>
       <Link to={linkTo}>
         <div className='pl-4 pb-12'>
-          <button className='bg-red-600 rounded text-2xl font-bold w-40 h-12 pl-4 '>VIEW MORE</button>
+          <button className='bg-red-600 rounded-2xl text-2xl font-bold w-40 h-12 pl-4 '>VIEW MORE</button>
         </div>
       </Link>
     </div>
@@ -25,7 +25,7 @@ export default function Products() {
   return (
     
     <div>
-      <div className='flex flex-row justify-between  '>
+      <div className='flex flex-row justify-between rounded '>
         <ProductCategory
           imageUrl='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           altText='Laptop'

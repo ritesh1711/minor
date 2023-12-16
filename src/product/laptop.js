@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Modal from 'react-modal';
-import { UseCart ,UseDispatchCart } from '../components/contextreducer';
-Modal.setAppElement('#root'); // Set the root element for accessibility
+import { UseCart, UseDispatchCart } from '../components/contextreducer';
 
+Modal.setAppElement('#root'); // Set the root element for accessibility
 
 export default function Laptop() {
   let dispatch = UseDispatchCart();
@@ -12,7 +12,7 @@ export default function Laptop() {
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [qty, setQuantity] = useState(1);
+  const [quantities, setQuantities] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,6 +26,11 @@ export default function Laptop() {
 
         const data = await response.json();
         setProducts(data);
+        const initialQuantities = {};
+        data.forEach(product => {
+          initialQuantities[product._id] = 1;
+        });
+        setQuantities(initialQuantities);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching products:', error.message);
@@ -36,15 +41,17 @@ export default function Laptop() {
     fetchData();
   }, []);
 
-  const handleAddToCart = async (product) => {
+  const handleAddToCart = async (productId) => {
+    const product = products.find((p) => p._id === productId);
     await dispatch({
-      type: "ADD",
+      type: 'ADD',
       payload: {
         id: product._id,
         name: product.name,
         brand: product.brand,
         model: product.model,
         price: product.price,
+        quantity: quantities[productId],
       },
     });
     console.log(data);
@@ -59,7 +66,6 @@ export default function Laptop() {
     setSelectedProduct(null);
     setModalIsOpen(false);
   };
-  
 
   return (
     <div className="container mx-auto my-8">
@@ -89,11 +95,25 @@ export default function Laptop() {
                 <p className="text-gray-600 mb-2">{product.model}</p>
                 <p className="text-2xl font-bold text-red-600 mb-4">${product.price}/-</p>
                 <button
-                  className="bg-blue-500 text-white px-4 py-2 rounded-mdgit "
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md"
                   onClick={() => handleAddToCart(product._id)}
                 >
                   Add to Cart
                 </button>
+                <div className="w-1/2">
+                  <p className="text-lg font-medium mb-2">Quantity</p>
+                  <select
+                    className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:border-blue-400"
+                    value={quantities[product._id]}
+                    onChange={(e) => setQuantities({ ...quantities, [product._id]: parseInt(e.target.value, 10) })}
+                  >
+                    {[...Array(10).keys()].map((i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <button
                   className="mt-4 bg-gray-500 text-white px-4 py-2 rounded-md"
                   onClick={() => openModal(product)}
@@ -118,7 +138,7 @@ export default function Laptop() {
               <h2 className="text-xl font-semibold mb-4">{selectedProduct.name} Specifications</h2>
               <p><strong>Brand:</strong> {selectedProduct.brand}</p>
               <p><strong>Model:</strong> {selectedProduct.model}</p>
-              <p><strong>Price:</strong> {selectedProduct.price}</p>
+              <p><strong>Price:</strong> ${selectedProduct.price}/-</p>
               <p><strong>Specifications:</strong> {selectedProduct.specifications}</p>
               <button className="mt-4 bg-gray-500 text-white px-4 py-2 rounded-md" onClick={closeModal}>
                 Close
